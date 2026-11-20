@@ -25,7 +25,7 @@ public class Bird : MonoBehaviour
     //      coded! :)
     private void OnEnable()
     {
-        
+        float _popUpTimeRemaining = _popUpTime;
     }
     // STEP 2 -----------------------------------------------------------------
 
@@ -35,6 +35,19 @@ public class Bird : MonoBehaviour
         // Update your timer, and if the bird should still be animating,
         //      move it upwards with Translate.
 
+        float time = Time.deltaTime;
+        _popUpTimeRemaining -= time;
+
+        
+        float movement = Input.GetAxis("Vertical");
+
+        if (_popUpTimeRemaining < 0) //check this logic cause idk
+        {
+            Transform birdTransform = gameObject.GetComponent<Transform>();
+            birdTransform.Translate(movement * Vector3.forward * Time.deltaTime);
+
+
+        }
 
         // STEP 3 -------------------------------------------------------------
 
