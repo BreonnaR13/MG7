@@ -739,10 +739,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c05c22b9a5004d9b84a48a57d4f93dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LookAtPlayer
-  _popUpTime: 0.25
+  _popUpTime: 0.5
   _popUpSpeed: 2
   _player: {fileID: 8264938254608900087}
-  moveSpeed: 0
 --- !u!4 &406130386
 Transform:
   m_ObjectHideFlags: 0
@@ -1305,10 +1304,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c05c22b9a5004d9b84a48a57d4f93dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LookAtPlayer
-  _popUpTime: 0.25
+  _popUpTime: 0.5
   _popUpSpeed: 2
   _player: {fileID: 8264938254608900087}
-  moveSpeed: 0
 --- !u!4 &704408758
 Transform:
   m_ObjectHideFlags: 0
@@ -1378,10 +1376,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c05c22b9a5004d9b84a48a57d4f93dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LookAtPlayer
-  _popUpTime: 0.25
+  _popUpTime: 0.5
   _popUpSpeed: 2
   _player: {fileID: 8264938254608900087}
-  moveSpeed: 0
 --- !u!4 &816085034
 Transform:
   m_ObjectHideFlags: 0
@@ -2293,10 +2290,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c05c22b9a5004d9b84a48a57d4f93dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LookAtPlayer
-  _popUpTime: 0.25
+  _popUpTime: 0.5
   _popUpSpeed: 2
   _player: {fileID: 8264938254608900087}
-  moveSpeed: 0
 --- !u!4 &1500197661
 Transform:
   m_ObjectHideFlags: 0
@@ -3649,10 +3645,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c05c22b9a5004d9b84a48a57d4f93dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LookAtPlayer
-  _popUpTime: 0.25
+  _popUpTime: 0.5
   _popUpSpeed: 5
   _player: {fileID: 8264938254608900087}
-  moveSpeed: 1
 --- !u!95 &6756054962036786048
 Animator:
   serializedVersion: 7

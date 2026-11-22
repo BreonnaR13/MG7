@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
-    [SerializeField] private float _popUpTime = 1.0f;
-    [SerializeField] private float _popUpSpeed = 5.0f;
+    [SerializeField] private float _popUpTime = 0.5f;
+    [SerializeField] private float _popUpSpeed = 5.0f; 
     [SerializeField] private Player _player;
 
     private bool _doPopUpAnimation;
@@ -25,7 +25,7 @@ public class Bird : MonoBehaviour
     //      coded! :)
     private void OnEnable()
     {
-        float _popUpTimeRemaining = _popUpTime;
+        _popUpTimeRemaining = _popUpTime;
     }
     // STEP 2 -----------------------------------------------------------------
 
@@ -34,19 +34,16 @@ public class Bird : MonoBehaviour
         // STEP 3 -------------------------------------------------------------
         // Update your timer, and if the bird should still be animating,
         //      move it upwards with Translate.
-
+       
         float time = Time.deltaTime;
         _popUpTimeRemaining -= time;
+        Transform birdTransform = gameObject.GetComponent<Transform>();
 
-        
         float movement = Input.GetAxis("Vertical");
-
-        if (_popUpTimeRemaining < 0) //check this logic cause idk
+        if (_popUpTimeRemaining > 0)
         {
-            Transform birdTransform = gameObject.GetComponent<Transform>();
-            birdTransform.Translate(movement * Vector3.forward * Time.deltaTime);
-
-
+            birdTransform.Translate(Vector3.forward * Time.deltaTime);
+        
         }
 
         // STEP 3 -------------------------------------------------------------
@@ -59,9 +56,14 @@ public class Bird : MonoBehaviour
         // If the player is holding a seed, make the bird look at the player
         //      with the Transform.LookAt() method:
         //      https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Transform.LookAt.html
+
+        bool thisIsTrue = true;
+
+        if (_player._isHoldingSeed)
+        {
+            birdTransform.LookAt(_player.GetComponent<Transform>());
+        }
         
-
-
         // STEP 6 -------------------------------------------------------------
     }
 }

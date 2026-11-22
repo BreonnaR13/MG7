@@ -17,7 +17,7 @@ public class TreeOfBirds : MonoBehaviour
         {
             Bird birdie = listOfBirds[i];
             float interDistance = Vector3.Distance(playerTransform.position, birdie.transform.position);
-            Debug.Log(interDistance);
+            //Debug.Log(interDistance);
             if (interDistance <= interDistanceMin){
                 birdie.gameObject.SetActive(true);
                 //Debug.Log(birdie);
